@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+/***********/
+/* HEADER */
+/*********/
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262533;
+    padding: 2rem;
+  }
+  .icone {
+    display: flex;
+    align-items: center;
+  }
+  .icone h2 {
+    margin-left: 2.5rem;
+    background: -webkit-linear-gradient(-90deg, #129cb8, #fe7e33, #32303d);
+    -webkit-background-clip: text;
+    color: transparent;
+    border-radius: 0.5rem solid #fff;
+  }
+  .icone img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+  .menu ul {
+    list-style: none;
+    position: relative;
+  }
+  .menu ul li {
+    width: 15rem;
+    float: left;
+  }
+  .menu a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    color: #fe7e33;
+    position: relative;
+    display: block;
+    text-align: center;
+  }
+  .menu ul ul {
+    position: absolute;
+    visibility: hidden;
+  }
+  .menu ul li:hover ul {
+    visibility: visible;
+  }
+  nav a::after {
+    content: " ";
+    width: 0%;
+    height: 0.1rem;
+    background-color: #129cb8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    transition: all 0.4s ease;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  .menu ul ul li {
+    float: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .menu ul ul li a {
+    background-color: #262533;
+  }
+  svg {
+    color: #fff;
+  }
+  .menu-itens {
+    display: none;
+    width: 4rem;
+  }
+  @media (max-width: 924px) {
+    .menu {
+      display: none;
+    }
+    .menu-itens {
+      display: block;
+      width: 4rem;
+    }
+  }
+/*********************/
+/* Container-Grupos */
+/*******************/
+h1{
+    color: #fe7e33;
+    text-align: center;
+    font-size: 3rem;
+    /*margin-top: 30px;*/
+}
+hr{
+    border: #fe7e33 solid;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.border{
+    height: 200px;
+    width: 200px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+}
+.border:hover{
+    border: 1px solid #fff;
+}
+.card{
+    margin-bottom: 30px;
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.card0{
+    background: url(img/Estrela\ do\ mar.jpg) center center no-repeat;
+    background-size: cover;
+    
+}
+.card0:hover{
+    background: url(img/Estrela\ do\ mar.jpg) left center no-repeat;
+    background-size: 300px;
+}
+.card0:hover h2{
+    opacity: 1;
+}
+.card0:hover .g{
+    opacity: 1;
+}
+.card1{
+    background: url(img/cruzeiro.jpg) center center no-repeat;
+    background-size: cover;
+}
+.card1:hover{
+    background: url(img/cruzeiro.jpg) left center no-repeat;
+    background-size: 300px;
+}
+.card1:hover h2{
+    opacity: 1;
+}
+.card1:hover .g{
+    opacity: 1;
+}
+.card2{
+    background: url(img/montsu.jpg) center center no-repeat;
+    background-size: cover;
+}
+.card2:hover{
+    background: url(img/montsu.jpg) left center no-repeat;
+    background-size: 300px;
+}
+.card2:hover h2{
+    opacity: 1;
+}
+.card2:hover .g{
+    opacity: 1;
+}
+.card3{
+    background: url(img/flores\ mindelo.jpg) center center no-repeat;
+    background-size: cover;
+}
+.card3:hover{
+    background: url(img/flores\ mindelo.jpg) left center no-repeat;
+    background-size: 300px;
+}
+.card3:hover h2{
+    opacity: 1;
+}
+.card3:hover .g{
+    opacity: 1;
+}
+.card4{
+    background: url(img/vindos\ oriente.jpg) center center no-repeat;
+    background-size: cover;
+}
+.card4:hover{
+    background: url(img/vindos\ oriente.jpg) left center no-repeat;
+    background-size: 300px;
+}
+.card4:hover h2{
+    opacity: 1;
+}
+.card4:hover .g{
+    opacity: 1;
+}
+h2{
+    color: #00d0ff;
+    background-color: #fe7e33;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    opacity: 0;
+    transition: opacity 1s; 
+}
+.g{
+    text-decoration: bold;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size: 1.5rem;
+}
+.texto{
+    position: absolute;
+    margin-left: 10px;
+    counter-reset: #fff;
+    height: 130px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.texto a {
+    text-decoration: none;
+    color: #000;
+}
+/********************/
+/* Content-Musicas */
+/******************/
+.content h1{
+    font-size: 3rem;
+    padding: 2rem 0;
+    text-shadow: 0.5rem 1rem #000;
+    color: #fff;
+}
+.content .music-container{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.content .music-container .box{
+    height: 16rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 1rem #000;
+    overflow: hidden;
+    margin: 2rem;
+}
+.content .music-container .box .image{
+    height: 100%;
+    width: 15%;
+
+}
+.content .music-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.content .music-container .box .music{
+    width: 75%;
+}
+.content .music-container .box .music audio{
+    width: 100%;
+    outline: none;
+}
+.content .music-container .box .music audio::-webkit-media-controls-enclosure{
+   background: none;
+}
+@media (max-width:600px) {
+.content .music-container .box{
+    height:27rem;
+    width:90%;
+    flex-flow: column;
+}
+.content .music-container .box .image{
+    height: 80%;
+    width:100%;
+}
+.content .music-container .box .music{
+    height: 20%;
+    width:100%;
+}
+}
+/*******************/
+/* Tabela-Horario */
+/*****************/
+table{
+    margin: 0 auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 800px;
+    height: 300px;
+    border: 1px solid #bdc3c7;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2) -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+th,td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.header{
+   background-color: #16a085;
+   color:#fff; 
+}
+td{
+    color: #000000;
+    font-size: 2rem;
+}
+tr:hover{
+    color: #000;
+    background-color: #f5f5f5;
+    transform:scale(1.02) ;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2) -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.h1{
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #16a085;
+    color: #fff;
+}
+@media (max-width: 768px){
+    table{
+        width: 90%;
+    }
+}
+/*********************************/
+/* Efeito-Paralax-entre-section */
+/*******************************/
+section{
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section:nth-of-type(1){
+    background-image: url(img/tr.png);
+    height: 700px;
+}
+section:nth-of-type(3){
+    background-image: url(img/t.png);
+    height: 1100px;
+}
+section:nth-of-type(5){
+    background-image: url(img/g.png);
+    height: 600px;
+}
+section:nth-of-type(2){
+   background: linear-gradient(315deg, #ffbc00, #ff0058);
+    height: 150px;
+}
+section:nth-of-type(4){
+   background: linear-gradient(315deg, #ffbc00, #ff0058);
+    height: 150px;
+}
+section:nth-of-type(6){
+   background: linear-gradient(315deg, #ffbc00, #ff0058);
+    height: 150px;
+}
+section:nth-of-type(7){
+    background-image: url(img/f3.png);
+    height: 700px;
+}
+/******************/
+/* Bootom-Assitir*/
+/****************/
+section p,a {
+    margin-top: 1.2rem;
+    font-size: 2rem;
+}
+.elemento{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  .elemento a{
+    color: #fff;
+    text-decoration: none;
+    padding: 2rem;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+    border-radius: 0.8rem;
+}
+.elemento a:hover{
+    color: #111;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+  .elemento p{
+    padding: 2rem;
+}
+.mapa{
+    height: 65rem;
+    width: 65rem;
+    margin-left: 40rem;
+}

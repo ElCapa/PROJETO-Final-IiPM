@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  background-image: url(img/fundo9.jpg);
+}
+/***********/
+/* HEADER */
+/*********/
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #262533;
+  padding: 2rem;
+}
+.icone {
+  display: flex;
+  align-items: center;
+}
+.icone h2 {
+  margin-left: 2.5rem;
+  background: -webkit-linear-gradient(-90deg, #129cb8, #fe7e33, #32303d);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-radius: 0.5rem solid #fff;
+}
+.icone img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.menu ul {
+  list-style: none;
+  position: relative;
+}
+.menu ul li {
+  width: 15rem;
+  float: left;
+}
+.menu a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  color: #fe7e33;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.menu ul ul {
+  position: absolute;
+  visibility: hidden;
+}
+.menu ul li:hover ul {
+  visibility: visible;
+}
+nav a::after {
+  content: " ";
+  width: 0%;
+  height: 0.1rem;
+  background-color: #129cb8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  transition: all 0.4s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+.menu ul ul li {
+  float: none;
+  border-bottom: 1px solid #ccc;
+}
+.menu ul ul li a {
+  background-color: #262533;
+}
+svg {
+  color: #fff;
+}
+.menu-itens {
+  display: none;
+  width: 4rem;
+}
+@media (max-width: 924px) {
+  .menu {
+    display: none;
+  }
+  .menu-itens {
+    display: block;
+    width: 4rem;
+  }
+}
+/**************/
+/* CONTAINER */
+/************/
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+}
+.container .box{
+  position: relative;
+  width: 23rem;
+  height: 32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 3rem;
+  transition: 0.5s;
+}
+.container .box::before{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.8rem;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.container .box::after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.8rem;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(3rem);
+  transition: 0.5s;
+}
+.container .box:hover::before,
+.container .box:hover:after{
+  transform: skewX(0deg);
+  left: 2rem;
+  width: calc(100% - 9rem);
+}
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after{
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after{
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after{
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.container .box:nth-child(4):before,
+.container .box:nth-child(4):after{
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.container .box:nth-child(5):before,
+.container .box:nth-child(5):after{
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.container .box span{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+.container .box1 span::before{
+ background-size:cover;
+  background-image: url(img/flores\ mindelo.jpg);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0.8rem;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 2s ease-in-out infinite;
+}
+.container .box2 span::before{
+  background-size:cover;
+   background-image: url(img/Estrela\ do\ mar.jpg);
+   content: " ";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 0.8rem;
+   backdrop-filter: blur(1rem);
+   opacity: 0;
+   transition: 0.5;
+   animation: animate 2s ease-in-out infinite;
+   box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+}
+.container .box3 span::before{
+  background-size:cover;
+   background-image: url(img/cruzeiro.jpg);
+   content: " ";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 0.8rem;
+   backdrop-filter: blur(1rem);
+   opacity: 0;
+   transition: 0.5;
+   animation: animate 2s ease-in-out infinite;
+   box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+}
+.container .box4 span::before{
+  background-size:cover;
+   background-image: url(img/montsu.jpg);
+   content: " ";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 0.8rem;
+   backdrop-filter: blur(1rem);
+   opacity: 0;
+   transition: 0.5;
+   animation: animate 2s ease-in-out infinite;
+   box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+}
+.container .box5 span::before{
+  background-size:cover;
+   background-image: url(img/vindos\ oriente.jpg);
+   content: " ";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 0.8rem;
+   backdrop-filter: blur(1rem);
+   opacity: 0;
+   transition: 0.5;
+   animation: animate 2s ease-in-out infinite;
+   box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+}
+.container .box:hover span::before{
+  top: -5rem;
+  left: 5rem;
+  width: 10rem;
+  height: 10rem;
+  opacity: 1;
+}
+.container .box1 span::after{
+  background-size:cover;
+  background-image: url(img/flores\ mindelo.jpg);
+  content:" ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+  animation-delay: -1s;
+}
+.container .box2 span::after{
+  background-size:cover;
+  background-image: url(img/Estrela\ do\ mar.jpg);
+  content:" ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+  animation-delay: -1s;
+}
+.container .box3 span::after{
+  background-size:cover;
+  background-image: url(img/cruzeiro.jpg);
+  content:" ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+  animation-delay: -1s;
+}
+.container .box4 span::after{
+  background-size:cover;
+  background-image: url(img/montsu.jpg);
+  content:" ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+  animation-delay: -1s;
+}
+.container .box5 span::after{
+  background-size:cover;
+  background-image: url(img/vindos\ oriente.jpg);
+  content:" ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  transition: 0.5;
+  animation: animate 3s ease-in-out infinite;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+  animation-delay: -1s;
+}
+.container .box:hover span::after{
+  bottom: -5rem;
+  right: 5rem;
+  width: 10rem;
+  height: 10rem;
+  opacity: 1;
+}
+.container .content{
+  font-size: 1.5rem;
+}
+@keyframes animate{
+  0%,100%{
+      transform: translateY(1rem);
+  }
+  50%{
+      transform: translateY(-1rem);
+  }
+}
+.container .box .content{
+  position: relative;
+  left: 0;
+  padding: 2rem 4rem;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+  border-radius: 0.8rem;
+  backdrop-filter: blur(1rem);
+  z-index: 1;
+  transition: 0.5s;
+  color: #fff;
+}
+.container .box:hover .content{
+  left: -25px;
+  padding: 6rem 4rem;
+}
+.container .box .content h2{
+  font-style: 2em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.container .box .content p{
+  margin-bottom: 1rem;
+  line-height: 1.4em;
+  font-style: 1.1em;
+}
+.container .box .content a{
+  display: inline-block;
+  color: #111;
+  padding: 1rem;
+  background: #fff;
+  font-style: 1.1em;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+/************************/
+/* Premios-Individuais */
+/**********************/
+.container-King{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  padding: 5rem;
+}
+.container-King .Boxer{
+  position: relative;
+  width: 21rem;
+  height: 32rem;
+  background-color: red;
+  margin: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+
+}
+.container-King .Boxer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.container-King .Boxer::after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(315deg,#4dff03,#00d0ff);
+  filter: blur(3rem);
+}
+.container-King .Boxer:nth-child(1):before,
+.container-King .Boxer:nth-child(1):after{
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.container-King .Boxer:nth-child(2):before,
+.container-King .Boxer:nth-child(2):after{
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+.container-King .Boxer:nth-child(3):before,
+.container-King .Boxer:nth-child(3):after{
+  background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.container-King .Boxer:nth-child(4):before,
+.container-King .Boxer:nth-child(4):after{
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.container-King .Boxer:nth-child(5):before,
+.container-King .Boxer:nth-child(5):after{
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+.container-King .Boxer:nth-child(6):before,
+.container-King .Boxer:nth-child(6):after{
+  background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.container-King .Boxer:nth-child(7):before,
+.container-King .Boxer:nth-child(7):after{
+  background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.container-King .Boxer:nth-child(8):before,
+.container-King .Boxer:nth-child(8):after{
+  background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+.container-King .Boxer:nth-child(9):before,
+.container-King .Boxer:nth-child(9):after{
+  background: linear-gradient(315deg,#4dff03,#00d0ff);
+}
+.container-King .Boxer b{
+  position: absolute;
+  inset: 0.6rem;
+  background: rgba(0,0,0,0.6);
+  z-index: 2;
+}
+.container-King .Boxer img{
+  position: absolute;
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.25;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.container-King .Boxer:hover img{
+  scale: 0.6;
+  opacity: 0.9;
+  transform: translateY(-7rem);
+}
+.container-King .Boxer .Contented{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  transition: 0.5s;
+  transform: scale(0);
+  z-index: 3;
+}
+.container-King .Boxer:hover .Contented{
+  transform: scale(1);
+  bottom: 3.5rem;
+}
+.container-King .Boxer h2{
+  position: relative;
+  color: #fff;
+  font-weight:500;
+  line-height: 1em;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align:center;
+}
+.container-King .Boxer h2 span{
+  font-weight:300;
+  font-size: 0.75em;
+}
+/*******************/
+/* VER RESULTADOS */
+/*****************/
+.elemento{
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+}
+.elemento a{
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem;
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+  border-radius: 0.8rem;
+}
+.elemento a:hover{
+  color: #111;
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.elemento p{
+  font-size: 2rem;
+  padding: 2rem;
+}
+/***************/
+/* TESTEMUNHO */
+/*************/
+.testemunho-container{
+  margin-top: 3rem;
+  background-color: #262533;
+  padding: 9.6rem;
+}
+.testemhunos {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonial-img {
+  border: 0.2rem #00d0ff solid;
+  margin-top: 4rem;
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.texto-testemunho {
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem #00ffbf91;
+}
+.testimonial-name {
+  text-align: end;
+  font-size: 1.6rem;
+  color: #00d0ff;
+}
+.OPINIOES{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #00d0ff;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.075rem;
+}
+/***********/
+/* fOOTER */
+/*********/
+.partners-footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  
+}
+.partners-footer h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.partners-footer ul li {
+  display: inline-block;
+  margin:  5rem;
+  padding:  5rem;
+}
+.partners-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.partners-footer ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.partners-footer a {
+  text-decoration: none;
+}
